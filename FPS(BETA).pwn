@@ -100,6 +100,10 @@ public OnPlayerDisconnect(playerid, reason)
 
 public OnPlayerSpawn(playerid)
 {
+    if(guyfps[playerid] == 1)
+ 	{
+ 	    FPSMode(playerid);
+	}
     SetTimerEx("dcek", 1, true, "i", playerid); // timer check
 	return 1;
 }
@@ -138,10 +142,6 @@ stock IsPlayerInWater(playerid)
 }
 public OnPlayerDeath(playerid, killerid, reason)
 {
-	if(guyfps[playerid] == 1)
- 	{
- 	    FPSMode(playerid);
-	}
 	return 1;
 }
 
