@@ -138,6 +138,10 @@ stock IsPlayerInWater(playerid)
 }
 public OnPlayerDeath(playerid, killerid, reason)
 {
+	if(guyfps[playerid] == 1)
+ 	{
+ 	    FPSMode(playerid);
+	}
 	return 1;
 }
 
